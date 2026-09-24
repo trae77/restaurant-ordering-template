@@ -1,0 +1,36 @@
+{
+  "name": "restaurant-ordering-template",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Mostly-complete restaurant ordering app template for client demos (React + Vite + Express + SQLite)",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -n api,web -c green,cyan \"npm run start:server\" \"vite\"",
+    "dev:web": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "start:server": "node server/server.cjs",
+    "init-db": "node server/init-db.cjs",
+    "seed": "node server/init-db.cjs",
+    "smoke": "node server/smoke-test.cjs"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "better-sqlite3": "^11.7.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "concurrently": "^9.1.0",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.3"
+  }
+}
