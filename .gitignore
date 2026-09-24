@@ -9,3 +9,4 @@ dist/
 *.log
 server/data.db
 .vite/
+*.tsbuildinfo
